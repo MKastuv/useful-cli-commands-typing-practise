@@ -1,0 +1,43 @@
+show ipv6 access-list
+show ipv6 mld snooping
+show ipv6 ospf
+show ipv6 ospf interface
+show ip vrf brief
+show license all
+show license authorization
+show license summary
+show license tech support
+show license udi
+show license usage
+show lldp neighbors
+show lldp neighbors detail
+show logging
+show memory statistics
+show ospfv3
+show ospfv3 interface
+show parameter-map type subscriber attribute-to-service all
+show platform
+show platform integrity sign nonce 12576020405939470947
+show platform software filesystem bootflash
+show platform sudi certificate sign nonce 12576020405939470947
+show privilege
+show processes cpu
+show processes cpu history
+show processes memory
+show redundancy
+show rom-monitor RP active
+show running-config
+show running-config all
+show running-config brief
+show running-config interface GigabitEthernet0/0/1
+show running-config partition common
+show snmp
+show snmp host
+show snmp user
+show spanning-tree summary
+show standby
+show subsys
+show template interface source built-in all
+show version
+show vrf detail
+show vtp status

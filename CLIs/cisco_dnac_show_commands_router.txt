@@ -1,0 +1,347 @@
+*Sep 22 19:32:11.225: %HA_EM-6-LOG: catchall: app-hosting appid guestshell
+*Sep 22 19:32:11.291: %HA_EM-6-LOG: catchall: app-vnic gateway0 virtualportgroup 0 guest-interface 0
+*Sep 22 19:32:11.297: %HA_EM-6-LOG: catchall: guest-ipaddress 192.168.0.2 netmask 255.255.255.0
+*Sep 22 19:32:11.304: %HA_EM-6-LOG: catchall: app-default-gateway 192.168.0.1 guest-interface 0
+*Sep 22 19:32:11.309: %HA_EM-6-LOG: catchall: name-server0 172.20.140.10
+*Sep 22 19:32:11.317: %HA_EM-6-LOG: catchall: netconf-yang 
+*Sep 22 19:32:11.333: %HA_EM-6-LOG: catchall: end 
+*Sep 22 19:32:12.869: %HA_EM-6-LOG: catchall: ip access-list extended meraki-fqdn-dns
+*Sep 22 19:32:12.871: %HA_EM-6-LOG: catchall: policy-map type control subscriber BUILTIN_AUTOCONF_POLICY
+*Sep 22 19:32:12.873: %HA_EM-6-LOG: catchall: event identity-update match-all 
+*Sep 22 19:32:12.875: %HA_EM-6-LOG: catchall: 10 class always do-until-failure 
+*Sep 22 19:32:12.877: %HA_EM-6-LOG: catchall: 10 map attribute-to-service table BUILTIN_DEVICE_TO_TEMPLATE
+*Sep 22 19:32:12.881: %HA_EM-6-LOG: catchall: parameter-map type subscriber attribute-to-service BUILTIN_DEVICE_TO_TEMPLATE
+*Sep 22 19:32:13.042: %HA_EM-6-LOG: catchall: 10 map device-type regex "Cisco-IP-Phone"
+*Sep 22 19:32:13.044: %HA_EM-6-LOG: catchall: 20 interface-template IP_PHONE_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.046: %HA_EM-6-LOG: catchall: 20 map device-type regex "Cisco-IP-Camera"
+*Sep 22 19:32:13.047: %HA_EM-6-LOG: catchall: 20 interface-template IP_CAMERA_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.049: %HA_EM-6-LOG: catchall: 30 map device-type regex "Cisco-DMP"
+*Sep 22 19:32:13.058: %HA_EM-6-LOG: catchall: 20 interface-template DMP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.060: %HA_EM-6-LOG: catchall: 40 map oui eq 00.0f.44
+*Sep 22 19:32:13.062: %HA_EM-6-LOG: catchall: 20 interface-template DMP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.064: %HA_EM-6-LOG: catchall: 50 map oui eq 00.23.ac
+*Sep 22 19:32:13.066: %HA_EM-6-LOG: catchall: 20 interface-template DMP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.093: %HA_EM-6-LOG: catchall: 60 map device-type regex "Cisco-AIR-AP"
+*Sep 22 19:32:13.095: %HA_EM-6-LOG: catchall: 20 interface-template AP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.097: %HA_EM-6-LOG: catchall: 70 map device-type regex "Cisco-AIR-LAP"
+*Sep 22 19:32:13.099: %HA_EM-6-LOG: catchall: 20 interface-template LAP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.101: %HA_EM-6-LOG: catchall: 80 map device-type regex "Cisco-TelePresence"
+*Sep 22 19:32:13.119: %HA_EM-6-LOG: catchall: 20 interface-template TP_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.121: %HA_EM-6-LOG: catchall: 90 map device-type regex "Surveillance-Camera"
+*Sep 22 19:32:13.122: %HA_EM-6-LOG: catchall: 10 interface-template MSP_CAMERA_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.125: %HA_EM-6-LOG: catchall: 100 map device-type regex "Video-Conference"
+*Sep 22 19:32:13.128: %HA_EM-6-LOG: catchall: 10 interface-template MSP_VC_INTERFACE_TEMPLATE
+*Sep 22 19:32:13.137: %HA_EM-6-LOG: catchall: 110 map device-type regex "Cisco-CAT-LAP"
+*Sep 22 19:32:13.139: %HA_EM-6-LOG: catchall: 10 interface-template LAP_INTERFACE_TEMPLATE
+*Sep 22 19:32:16.011: %HA_EM-6-LOG: catchall: end 
+*Sep 22 19:32:16.013: %HA_EM-6-LOG: catchall: wsma agent exec profile webui_wsma_http
+*Sep 22 19:32:16.016: %HA_EM-6-LOG: catchall: wsma agent config profile webui_wsma_http
+*Sep 22 19:32:16.080: %HA_EM-6-LOG: catchall: wsma agent filesys profile webui_wsma_http
+*Sep 22 19:32:16.082: %HA_EM-6-LOG: catchall: wsma agent notify profile webui_wsma_http
+*Sep 22 19:32:16.084: %HA_EM-6-LOG: catchall: wsma profile listener webui_wsma_http
+*Sep 22 19:32:16.086: %HA_EM-6-LOG: catchall: transport http path /webui_wsma_http
+*Sep 22 19:32:16.088: %HA_EM-6-LOG: catchall: no wsse authorization level 15
+*Sep 22 19:32:16.096: %HA_EM-6-LOG: catchall: wsma agent exec profile webui_wsma_https
+*Sep 22 19:32:16.097: %HA_EM-6-LOG: catchall: wsma agent config profile webui_wsma_https
+*Sep 22 19:32:16.100: %HA_EM-6-LOG: catchall: wsma agent filesys profile webui_wsma_https
+*Sep 22 19:32:16.179: %HA_EM-6-LOG: catchall: wsma agent notify profile webui_wsma_https
+*Sep 22 19:32:16.181: %HA_EM-6-LOG: catchall: wsma profile listener webui_wsma_https
+*Sep 22 19:32:16.183: %HA_EM-6-LOG: catchall: transport https path /webui_wsma_https
+*Sep 22 19:32:16.185: %HA_EM-6-LOG: catchall: no wsse authorization level 15
+*Sep 22 19:32:16.188: %HA_EM-6-LOG: catchall: end 
+*Sep 22 19:32:21.580: %HA_EM-6-LOG: catchall: ip access-list extended CISCO-CWA-URL-REDIRECT-ACL
+*Sep 22 19:32:21.582: %HA_EM-6-LOG: catchall: remark Configure deny ip any host <server-ip> to allow access to <server-ip>
+*Sep 22 19:32:21.585: %HA_EM-6-LOG: catchall: 100 deny udp any any eq domain 
+*Sep 22 19:32:21.588: %HA_EM-6-LOG: catchall: 101 deny tcp any any eq domain 
+*Sep 22 19:32:21.590: %HA_EM-6-LOG: catchall: 102 deny udp any eq bootps  any 
+*Sep 22 19:32:21.598: %HA_EM-6-LOG: catchall: 103 deny udp any any eq bootpc 
+*Sep 22 19:32:21.600: %HA_EM-6-LOG: catchall: 104 deny udp any eq bootpc  any 
+*Sep 22 19:32:21.602: %HA_EM-6-LOG: catchall: 105 permit tcp any any eq www 
+*Sep 22 19:32:21.605: %HA_EM-6-LOG: catchall: end 
+*Sep 22 19:32:37.871: %HA_EM-6-LOG: catchall: show logging 
+*Sep 22 19:32:38.466: %HA_EM-6-LOG: catchall: show inventory 
+*Sep 22 19:33:37.188: %HA_EM-6-LOG: catchall: show bootflash: 
+*Sep 22 19:33:37.191: %HA_EM-6-LOG: catchall: show platform software filesystem bootflash:  
+*Sep 22 19:34:08.486: %HA_EM-6-LOG: catchall: show bootflash: 
+*Sep 22 19:34:08.545: %HA_EM-6-LOG: catchall: show platform software filesystem bootflash:  
+Sep 22 19:34:46.023: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:35:13.416: %HA_EM-6-LOG: catchall: show running-config interface GigabitEthernet0/0/1 
+Sep 22 19:35:27.511: %HA_EM-6-LOG: catchall: show cdp neighbors 
+Sep 22 19:36:09.026: %HA_EM-6-LOG: catchall: terminal monitor 
+Sep 22 19:36:11.623: %HA_EM-6-LOG: catchall: show logging 
+Sep 22 19:36:16.523: %HA_EM-6-LOG: catchall: show running-config brief 
+Sep 22 19:37:29.511: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:37:29.537: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:37:29.635: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:30.441: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:37:30.635: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:31.077: %HA_EM-6-LOG: catchall: show file systems 
+Sep 22 19:37:31.388: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:31.848: %HA_EM-6-LOG: catchall: dir bootflash: 
+Sep 22 19:37:32.077: %HA_EM-6-LOG: catchall: show rom-monitor RP active 
+Sep 22 19:37:32.367: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:32.804: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:37:32.880: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:34.095: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:37:34.147: %HA_EM-6-LOG: catchall: show cdp neighbors 
+Sep 22 19:37:34.320: %HA_EM-6-LOG: catchall: show spanning-tree summary 
+Sep 22 19:37:38.465: %HA_EM-6-LOG: catchall: configure terminal lock 
+Sep 22 19:37:38.844: %HA_EM-6-LOG: catchall: license smart transport off 
+Sep 22 19:37:38.993: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:37:39.178: %HA_EM-6-LOG: catchall: write 
+Sep 22 19:37:44.644: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:37:44.674: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:37:44.771: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:37:44.849: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:37:44.906: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:37:45.328: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:37:45.358: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:37:45.418: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:37:46.140: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:37:46.186: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:37:46.608: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:37:46.679: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:47.191: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:37:47.318: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:47.768: %HA_EM-6-LOG: catchall: show file systems 
+Sep 22 19:37:52.074: %HA_EM-6-LOG: catchall: dir bootflash: 
+Sep 22 19:37:52.428: %HA_EM-6-LOG: catchall: show rom-monitor RP active 
+Sep 22 19:37:52.547: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:37:52.623: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:37:53.426: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:37:54.698: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:37:54.712: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:37:54.767: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:37:54.885: %HA_EM-6-LOG: catchall: no snmp-server host 172.20.161.110 traps SNMPv3_SF
+Sep 22 19:37:54.902: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:37:54.969: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:38:06.075: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:06.186: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:38:06.206: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:38:06.612: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:38:06.627: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:38:06.700: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:38:07.261: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:38:07.303: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:38:07.692: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:38:07.773: %HA_EM-6-LOG: catchall: show license all 
+Sep 22 19:38:07.921: %HA_EM-6-LOG: catchall: show license tech support 
+Sep 22 19:38:08.027: %HA_EM-6-LOG: catchall: show license authorization 
+Sep 22 19:38:08.121: %HA_EM-6-LOG: catchall: show license summary 
+Sep 22 19:38:08.170: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:38:08.560: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:08.814: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:38:10.058: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:38:10.248: %HA_EM-6-LOG: catchall: snmp-server enable traps 
+Sep 22 19:38:10.308: %HA_EM-6-LOG: catchall: show running-config brief 
+Sep 22 19:38:10.666: %HA_EM-6-LOG: catchall: snmp-server host 172.20.161.110 traps version 3 priv SNMPv3_SF udp-port 162
+Sep 22 19:38:11.004: %HA_EM-6-LOG: catchall: snmp-server source-interface traps Loopback0 
+Sep 22 19:38:11.090: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:38:11.301: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:38:11.487: %HA_EM-6-LOG: catchall: show platform 
+Sep 22 19:38:12.163: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:38:13.225: %HA_EM-6-LOG: catchall: show inventory oid 
+Sep 22 19:38:13.769: %HA_EM-6-LOG: catchall: show running-config brief 
+Sep 22 19:38:13.895: %HA_EM-6-LOG: catchall: show diag all eeprom detail 
+Sep 22 19:38:14.629: %HA_EM-6-LOG: catchall: show interfaces 
+Sep 22 19:38:15.499: %HA_EM-6-LOG: catchall: show file systems 
+Sep 22 19:38:18.765: %HA_EM-6-LOG: catchall: show bootflash: all 
+Sep 22 19:38:18.774: %HA_EM-6-LOG: catchall: show platform software filesystem bootflash:  all 
+Sep 22 19:38:20.280: %HA_EM-6-LOG: catchall: show data-corruption 
+Sep 22 19:38:20.926: %HA_EM-6-LOG: catchall: show memory statistics 
+Sep 22 19:38:21.783: %HA_EM-6-LOG: catchall: show processes memory 
+Sep 22 19:38:22.633: %HA_EM-6-LOG: catchall: show processes cpu 
+Sep 22 19:38:23.023: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:23.089: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:38:23.111: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:38:23.251: %HA_EM-6-LOG: catchall: show processes cpu history 
+Sep 22 19:38:23.530: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:38:23.556: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:38:23.643: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:38:23.781: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:25.027: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:38:25.037: %HA_EM-6-LOG: catchall: show buffers 
+Sep 22 19:38:25.170: %HA_EM-6-LOG: catchall: no logging source-interface Loopback0 
+Sep 22 19:38:25.197: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:38:25.275: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:38:36.456: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:36.528: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:38:36.548: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:38:36.932: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:38:36.953: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:38:37.016: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:38:37.545: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:38:37.591: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:38:37.994: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:38:38.051: %HA_EM-6-LOG: catchall: show license all 
+Sep 22 19:38:38.150: %HA_EM-6-LOG: catchall: show license tech support 
+Sep 22 19:38:38.209: %HA_EM-6-LOG: catchall: show license authorization 
+Sep 22 19:38:38.268: %HA_EM-6-LOG: catchall: show license summary 
+Sep 22 19:38:38.317: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:38:38.715: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:38.868: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:38:40.079: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:38:40.157: %HA_EM-6-LOG: catchall: logging source-interface Loopback0 
+Sep 22 19:38:40.232: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:38:40.305: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:38:51.652: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:38:51.683: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:38:51.791: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:51.856: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:38:51.873: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:38:52.253: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:38:52.281: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:38:52.358: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:38:52.932: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:38:52.974: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:38:53.374: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:38:53.446: %HA_EM-6-LOG: catchall: show license all 
+Sep 22 19:38:53.517: %HA_EM-6-LOG: catchall: show license tech support 
+Sep 22 19:38:53.587: %HA_EM-6-LOG: catchall: show license authorization 
+Sep 22 19:38:53.646: %HA_EM-6-LOG: catchall: show license summary 
+Sep 22 19:38:53.685: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:38:53.923: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:38:53.976: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:38:53.998: %HA_EM-6-LOG: catchall: call-home 
+Sep 22 19:38:54.038: %HA_EM-6-LOG: catchall: profile CiscoTAC-1 
+Sep 22 19:38:54.070: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:38:54.085: %HA_EM-6-LOG: catchall: no destination address http all 
+Sep 22 19:38:54.112: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:38:54.185: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:38:54.742: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:38:54.852: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:38:54.982: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:38:55.645: %HA_EM-6-LOG: catchall: show file systems 
+Sep 22 19:38:56.991: %HA_EM-6-LOG: catchall: dir bootflash: 
+Sep 22 19:38:57.567: %HA_EM-6-LOG: catchall: show running-config brief 
+Sep 22 19:39:01.021: %HA_EM-6-LOG: catchall: show rom-monitor RP active 
+Sep 22 19:39:01.429: %HA_EM-6-LOG: catchall: show install summary 
+Sep 22 19:39:01.543: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:39:02.498: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:39:05.498: %HA_EM-6-LOG: catchall: configure terminal 
+Sep 22 19:39:05.520: %HA_EM-6-LOG: catchall: call-home 
+Sep 22 19:39:05.563: %HA_EM-6-LOG: catchall: profile CiscoTAC-1 
+Sep 22 19:39:05.731: %HA_EM-6-LOG: catchall: destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
+Sep 22 19:39:05.783: %HA_EM-6-LOG: catchall: end 
+Sep 22 19:39:05.858: %HA_EM-6-LOG: catchall: write memory 
+Sep 22 19:39:20.367: %HA_EM-6-LOG: catchall: write 
+Sep 22 19:39:35.150: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:41:04.479: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:41:17.559: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:42:02.194: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:42:02.215: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:42:02.328: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:42:02.404: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:42:02.425: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:42:02.819: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:42:02.856: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:42:02.915: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:42:03.485: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:42:03.530: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:42:03.954: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:42:04.008: %HA_EM-6-LOG: catchall: show license all 
+Sep 22 19:42:04.080: %HA_EM-6-LOG: catchall: show license tech support 
+Sep 22 19:42:04.151: %HA_EM-6-LOG: catchall: show license authorization 
+Sep 22 19:42:04.209: %HA_EM-6-LOG: catchall: show license summary 
+Sep 22 19:42:04.244: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:42:04.624: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:42:04.797: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:42:04.881: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:42:05.698: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:42:20.960: %HA_EM-6-LOG: catchall: exit 
+Sep 22 19:44:09.499: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:44:13.400: %HA_EM-6-LOG: catchall: show logging 
+Sep 22 19:44:19.521: %HA_EM-6-LOG: catchall: exit 
+Sep 22 19:47:54.733: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:47:54.761: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:47:54.876: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:47:54.945: %HA_EM-6-LOG: catchall: show privilege 
+Sep 22 19:47:54.962: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:47:55.341: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:47:55.361: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:47:55.417: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:47:56.977: %HA_EM-6-LOG: catchall: show ip nbar protocol-pack active 
+Sep 22 19:47:57.038: %HA_EM-6-LOG: catchall: show ip nbar version 
+Sep 22 19:47:57.086: %HA_EM-6-LOG: catchall: show file systems 
+Sep 22 19:47:57.168: %HA_EM-6-LOG: catchall: show ip nbar attribute sub-category 
+Sep 22 19:47:57.240: %HA_EM-6-LOG: catchall: show ip nbar attribute category 
+Sep 22 19:47:57.305: %HA_EM-6-LOG: catchall: show ip nbar attribute 
+Sep 22 19:47:57.368: %HA_EM-6-LOG: catchall: show running-config 
+Sep 22 19:47:58.996: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:47:59.361: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:47:59.384: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:47:59.453: %HA_EM-6-LOG: catchall: show ip nbar protocol-id 
+Sep 22 19:47:59.693: %HA_EM-6-LOG: catchall: show ip nbar protocol-pack loaded 
+Sep 22 19:47:59.884: %HA_EM-6-LOG: catchall: show ip nbar protocol-pack active taxonomy 
+Sep 22 19:48:01.820: %HA_EM-6-LOG: catchall: show flow exporter 
+Sep 22 19:48:02.018: %HA_EM-6-LOG: catchall: show running-config all 
+Sep 22 19:48:02.632: %HA_EM-6-LOG: catchall: show running-config all 
+Sep 22 19:48:03.242: %HA_EM-6-LOG: catchall: show ip access-lists 
+Sep 22 19:48:03.302: %HA_EM-6-LOG: catchall: show ipv6 access-list 
+Sep 22 19:48:03.372: %HA_EM-6-LOG: catchall: show hosts 
+Sep 22 19:48:03.704: %HA_EM-6-LOG: catchall: show ip igmp snooping 
+Sep 22 19:48:03.788: %HA_EM-6-LOG: catchall: show ipv6 mld snooping 
+Sep 22 19:48:04.009: %HA_EM-6-LOG: catchall: show running-config partition common 
+Sep 22 19:48:04.329: %HA_EM-6-LOG: catchall: show ip interface 
+Sep 22 19:48:04.565: %HA_EM-6-LOG: catchall: show vrf detail 
+Sep 22 19:48:04.751: %HA_EM-6-LOG: catchall: show ip route summary 
+Sep 22 19:48:04.816: %HA_EM-6-LOG: catchall: show ip vrf brief 
+Sep 22 19:48:04.895: %HA_EM-6-LOG: catchall: show ip route vrf Mgmt-intf summary 
+Sep 22 19:48:04.961: %HA_EM-6-LOG: catchall: show ip route vrf Sanford_Global summary 
+Sep 22 19:48:05.048: %HA_EM-6-LOG: catchall: show ip route vrf Sanford_Guest summary 
+Sep 22 19:48:05.089: %HA_EM-6-LOG: catchall: show ip route 
+Sep 22 19:48:05.164: %HA_EM-6-LOG: catchall: show flow monitor 
+Sep 22 19:48:05.230: %HA_EM-6-LOG: catchall: show interfaces 
+Sep 22 19:48:05.365: %HA_EM-6-LOG: catchall: show diag chassis eeprom detail 
+Sep 22 19:48:05.528: %HA_EM-6-LOG: catchall: show ip ospf 
+Sep 22 19:48:05.568: %HA_EM-6-LOG: catchall: show ospfv3 
+Sep 22 19:48:05.620: %HA_EM-6-LOG: catchall: show ospfv3 interface 
+Sep 22 19:48:05.669: %HA_EM-6-LOG: catchall: show ipv6 ospf 
+Sep 22 19:48:05.734: %HA_EM-6-LOG: catchall: show ipv6 ospf interface 
+Sep 22 19:48:05.833: %HA_EM-6-LOG: catchall: show redundancy 
+Sep 22 19:48:05.925: %HA_EM-6-LOG: catchall: show standby 
+Sep 22 19:48:06.025: %HA_EM-6-LOG: catchall: show cef state 
+Sep 22 19:48:06.198: %HA_EM-6-LOG: catchall: show cdp neighbors detail 
+Sep 22 19:48:06.252: %HA_EM-6-LOG: catchall: show lldp neighbors 
+Sep 22 19:48:07.324: %HA_EM-6-LOG: catchall: logout 
+Sep 22 19:48:07.643: %HA_EM-6-LOG: catchall: terminal length 0
+Sep 22 19:48:07.674: %HA_EM-6-LOG: catchall: terminal width 0
+Sep 22 19:48:07.792: %HA_EM-6-LOG: catchall: show device-tracking database address all 
+Sep 22 19:48:07.860: %HA_EM-6-LOG: catchall: show lldp neighbors detail 
+Sep 22 19:48:07.940: %HA_EM-6-LOG: catchall: show flow monitor 
+Sep 22 19:48:08.016: %HA_EM-6-LOG: catchall: show logging 
+Sep 22 19:48:08.062: %HA_EM-6-LOG: catchall: show snmp 
+Sep 22 19:48:08.112: %HA_EM-6-LOG: catchall: show snmp host 
+Sep 22 19:48:08.178: %HA_EM-6-LOG: catchall: show cef interface brief 
+Sep 22 19:48:08.267: %HA_EM-6-LOG: catchall: show ip route vrf Mgmt-intf
+Sep 22 19:48:08.348: %HA_EM-6-LOG: catchall: show ip route vrf Sanford_Global
+Sep 22 19:48:08.419: %HA_EM-6-LOG: catchall: show ip route vrf Sanford_Guest
+Sep 22 19:48:08.575: %HA_EM-6-LOG: catchall: show clock 
+Sep 22 19:48:08.640: %HA_EM-6-LOG: catchall: show snmp user 
+Sep 22 19:48:08.776: %HA_EM-6-LOG: catchall: show flow interface 
+Sep 22 19:48:08.870: %HA_EM-6-LOG: catchall: show processes cpu 
+Sep 22 19:48:08.934: %HA_EM-6-LOG: catchall: show license usage 
+Sep 22 19:48:09.136: %HA_EM-6-LOG: catchall: show flow record 
+Sep 22 19:48:09.343: %HA_EM-6-LOG: catchall: show running-config all 
+Sep 22 19:48:09.800: %HA_EM-6-LOG: catchall: show interfaces switchport 
+Sep 22 19:48:09.872: %HA_EM-6-LOG: catchall: show vtp status 
+Sep 22 19:48:09.938: %HA_EM-6-LOG: catchall: show ip access-lists 
+Sep 22 19:48:10.076: %HA_EM-6-LOG: catchall: show ip nat map 
+Sep 22 19:48:10.139: %HA_EM-6-LOG: catchall: show license all 
+Sep 22 19:48:10.211: %HA_EM-6-LOG: catchall: show license tech support 
+Sep 22 19:48:10.279: %HA_EM-6-LOG: catchall: show license authorization 
+Sep 22 19:48:10.342: %HA_EM-6-LOG: catchall: show license summary 
+Sep 22 19:48:10.392: %HA_EM-6-LOG: catchall: show version 
+Sep 22 19:48:10.763: %HA_EM-6-LOG: catchall: show license udi 
+Sep 22 19:48:10.926: %HA_EM-6-LOG: catchall: show call-home profile all 
+Sep 22 19:48:11.208: %HA_EM-6-LOG: catchall: show template interface source built-in all 
+Sep 22 19:48:11.310: %HA_EM-6-LOG: catchall: show parameter-map type subscriber attribute-to-service all 
+Sep 22 19:48:11.711: %HA_EM-6-LOG: catchall: show cts credentials 
+Sep 22 19:48:11.887: %HA_EM-6-LOG: catchall: show ip interface brief 
+Sep 22 19:48:12.091: %HA_EM-6-LOG: catchall: show subsys 
+Sep 22 19:48:12.301: %HA_EM-6-LOG: catchall: show ip nhrp 
+Sep 22 19:48:12.607: %HA_EM-6-LOG: catchall: show crypto key mypubkey rsa 
+Sep 22 19:48:12.782: %HA_EM-6-LOG: catchall: show ip nhrp nhs 
+Sep 22 19:48:12.979: %HA_EM-6-LOG: catchall: show platform sudi certificate sign nonce 12576020405939470947
+Sep 22 19:48:16.722: %HA_EM-6-LOG: catchall: show platform integrity sign nonce 12576020405939470947
+Sep 22 19:48:18.788: %HA_EM-6-LOG: catchall: verify /md5 system:memory/text 

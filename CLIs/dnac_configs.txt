@@ -1,0 +1,347 @@
+app-hosting appid guestshell
+app-vnic gateway0 virtualportgroup 0 guest-interface 0
+guest-ipaddress 192.168.0.2 netmask 255.255.255.0
+app-default-gateway 192.168.0.1 guest-interface 0
+name-server0 172.20.140.10
+netconf-yang 
+end 
+ip access-list extended meraki-fqdn-dns
+policy-map type control subscriber BUILTIN_AUTOCONF_POLICY
+event identity-update match-all 
+10 class always do-until-failure 
+10 map attribute-to-service table BUILTIN_DEVICE_TO_TEMPLATE
+parameter-map type subscriber attribute-to-service BUILTIN_DEVICE_TO_TEMPLATE
+10 map device-type regex "Cisco-IP-Phone"
+20 interface-template IP_PHONE_INTERFACE_TEMPLATE
+20 map device-type regex "Cisco-IP-Camera"
+20 interface-template IP_CAMERA_INTERFACE_TEMPLATE
+30 map device-type regex "Cisco-DMP"
+20 interface-template DMP_INTERFACE_TEMPLATE
+40 map oui eq 00.0f.44
+20 interface-template DMP_INTERFACE_TEMPLATE
+50 map oui eq 00.23.ac
+20 interface-template DMP_INTERFACE_TEMPLATE
+60 map device-type regex "Cisco-AIR-AP"
+20 interface-template AP_INTERFACE_TEMPLATE
+70 map device-type regex "Cisco-AIR-LAP"
+20 interface-template LAP_INTERFACE_TEMPLATE
+80 map device-type regex "Cisco-TelePresence"
+20 interface-template TP_INTERFACE_TEMPLATE
+90 map device-type regex "Surveillance-Camera"
+10 interface-template MSP_CAMERA_INTERFACE_TEMPLATE
+100 map device-type regex "Video-Conference"
+10 interface-template MSP_VC_INTERFACE_TEMPLATE
+110 map device-type regex "Cisco-CAT-LAP"
+10 interface-template LAP_INTERFACE_TEMPLATE
+end 
+wsma agent exec profile webui_wsma_http
+wsma agent config profile webui_wsma_http
+wsma agent filesys profile webui_wsma_http
+wsma agent notify profile webui_wsma_http
+wsma profile listener webui_wsma_http
+transport http path /webui_wsma_http
+no wsse authorization level 15
+wsma agent exec profile webui_wsma_https
+wsma agent config profile webui_wsma_https
+wsma agent filesys profile webui_wsma_https
+wsma agent notify profile webui_wsma_https
+wsma profile listener webui_wsma_https
+transport https path /webui_wsma_https
+no wsse authorization level 15
+end 
+ip access-list extended CISCO-CWA-URL-REDIRECT-ACL
+remark Configure deny ip any host <server-ip> to allow access to <server-ip>
+100 deny udp any any eq domain 
+101 deny tcp any any eq domain 
+102 deny udp any eq bootps  any 
+103 deny udp any any eq bootpc 
+104 deny udp any eq bootpc  any 
+105 permit tcp any any eq www 
+end 
+show logging 
+show inventory 
+show bootflash
+show platform software filesystem bootflash
+show bootflash
+show platform software filesystem bootflash
+show ip interface brief 
+show running-config interface GigabitEthernet0/0/1 
+show cdp neighbors 
+terminal monitor 
+show logging 
+show running-config brief 
+terminal length 0
+terminal width 0
+show version 
+show install summary 
+show version 
+show file systems 
+show version 
+dir bootflash
+show rom-monitor RP active 
+show version 
+show install summary 
+show version 
+show ip interface brief 
+show cdp neighbors 
+show spanning-tree summary 
+configure terminal lock 
+license smart transport off 
+end 
+write 
+terminal length 0
+terminal width 0
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show hosts 
+show running-config 
+show clock 
+show version 
+show install summary 
+show version 
+show file systems 
+dir bootflash
+show rom-monitor RP active 
+show install summary 
+show version 
+show license udi 
+terminal length 0
+terminal width 0
+configure terminal 
+no snmp-server host 172.20.161.110 traps SNMPv3_SF
+end 
+write memory 
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show hosts 
+show running-config 
+show clock 
+show license all 
+show license tech support 
+show license authorization 
+show license summary 
+show version 
+show license udi 
+show call-home profile all 
+configure terminal 
+snmp-server enable traps 
+show running-config brief 
+snmp-server host 172.20.161.110 traps version 3 priv SNMPv3_SF udp-port 162
+snmp-server source-interface traps Loopback0 
+end 
+write memory 
+show platform 
+show version 
+show inventory oid 
+show running-config brief 
+show diag all eeprom detail 
+show interfaces 
+show file systems 
+show bootflash
+show platform software filesystem bootflash
+show data-corruption 
+show memory statistics 
+show processes memory 
+show processes cpu 
+show license udi 
+show privilege 
+logout 
+show processes cpu history 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show license udi 
+configure terminal 
+show buffers 
+no logging source-interface Loopback0 
+end 
+write memory 
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show hosts 
+show running-config 
+show clock 
+show license all 
+show license tech support 
+show license authorization 
+show license summary 
+show version 
+show license udi 
+show call-home profile all 
+configure terminal 
+logging source-interface Loopback0 
+end 
+write memory 
+terminal length 0
+terminal width 0
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show hosts 
+show running-config 
+show clock 
+show license all 
+show license tech support 
+show license authorization 
+show license summary 
+show version 
+show call-home profile all 
+configure terminal 
+call-home 
+profile CiscoTAC-1 
+show license udi 
+no destination address http all 
+end 
+write memory 
+show call-home profile all 
+show install summary 
+show version 
+show file systems 
+dir bootflash
+show running-config brief 
+show rom-monitor RP active 
+show install summary 
+show version 
+show license udi 
+configure terminal 
+call-home 
+profile CiscoTAC-1 
+destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
+end 
+write memory 
+write 
+logout 
+logout 
+logout 
+terminal length 0
+terminal width 0
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show hosts 
+show running-config 
+show clock 
+show license all 
+show license tech support 
+show license authorization 
+show license summary 
+show version 
+show license udi 
+show call-home profile all 
+show version 
+show license udi 
+exit 
+logout 
+show logging 
+exit 
+terminal length 0
+terminal width 0
+show license udi 
+show privilege 
+logout 
+terminal length 0
+terminal width 0
+show ip interface brief 
+show ip nbar protocol-pack active 
+show ip nbar version 
+show file systems 
+show ip nbar attribute sub-category 
+show ip nbar attribute category 
+show ip nbar attribute 
+show running-config 
+logout 
+terminal length 0
+terminal width 0
+show ip nbar protocol-id 
+show ip nbar protocol-pack loaded 
+show ip nbar protocol-pack active taxonomy 
+show flow exporter 
+show running-config all 
+show running-config all 
+show ip access-lists 
+show ipv6 access-list 
+show hosts 
+show ip igmp snooping 
+show ipv6 mld snooping 
+show running-config partition common 
+show ip interface 
+show vrf detail 
+show ip route summary 
+show ip vrf brief 
+show ip route vrf Mgmt-intf summary 
+show ip route vrf Sanford_Global summary 
+show ip route vrf Sanford_Guest summary 
+show ip route 
+show flow monitor 
+show interfaces 
+show diag chassis eeprom detail 
+show ip ospf 
+show ospfv3 
+show ospfv3 interface 
+show ipv6 ospf 
+show ipv6 ospf interface 
+show redundancy 
+show standby 
+show cef state 
+show cdp neighbors detail 
+show lldp neighbors 
+logout 
+terminal length 0
+terminal width 0
+show device-tracking database address all 
+show lldp neighbors detail 
+show flow monitor 
+show logging 
+show snmp 
+show snmp host 
+show cef interface brief 
+show ip route vrf Mgmt-intf
+show ip route vrf Sanford_Global
+show ip route vrf Sanford_Guest
+show clock 
+show snmp user 
+show flow interface 
+show processes cpu 
+show license usage 
+show flow record 
+show running-config all 
+show interfaces switchport 
+show vtp status 
+show ip access-lists 
+show ip nat map 
+show license all 
+show license tech support 
+show license authorization 
+show license summary 
+show version 
+show license udi 
+show call-home profile all 
+show template interface source built-in all 
+show parameter-map type subscriber attribute-to-service all 
+show cts credentials 
+show ip interface brief 
+show subsys 
+show ip nhrp 
+show crypto key mypubkey rsa 
+show ip nhrp nhs 
+show platform sudi certificate sign nonce 12576020405939470947
+show platform integrity sign nonce 12576020405939470947
+verify /md5 system:memory/text 

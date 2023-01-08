@@ -1,0 +1,49 @@
+show bootflash:
+show buffers
+show call-home profile all
+show cdp neighbors
+show cdp neighbors detail
+show cef interface brief
+show cef state
+show clock
+show crypto key mypubkey rsa
+show cts credentials
+show data-corruption
+show device-tracking database address all
+show diag all eeprom detail
+show diag chassis eeprom detail
+show file systems
+show flow exporter
+show flow interface
+show flow monitor
+show flow record
+show hosts
+show install summary
+show interfaces
+show interfaces switchport
+show inventory
+show inventory oid
+show ip access-lists
+show ip igmp snooping
+show ip interface
+show ip interface brief
+show ip nat map
+show ip nbar attribute
+show ip nbar attribute category
+show ip nbar attribute sub-category
+show ip nbar protocol-id
+show ip nbar protocol-pack active
+show ip nbar protocol-pack active taxonomy
+show ip nbar protocol-pack loaded
+show ip nbar version
+show ip nhrp
+show ip nhrp nhs
+show ip ospf
+show ip route
+show ip route summary
+show ip route vrf Mgmt-intf
+show ip route vrf Mgmt-intf summary
+show ip route vrf Sanford_Global
+show ip route vrf Sanford_Global summary
+show ip route vrf Sanford_Guest
+show ip route vrf Sanford_Guest summary
